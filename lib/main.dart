@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'big_cart/cart_empty.dart';
-import 'big_cart/cart_empty.dart';
+import 'routes_screen/app_route.dart';
+import 'routes_screen/route_name.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const CartEmpty(),
+      initialRoute: Routesname.initialRoute,
+      routes: AppRoutes().approutes,
+      // home: const Welcome(),
     );
   }
 }

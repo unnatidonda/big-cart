@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'route_name.dart';
+
 class ThirdRoutes extends StatefulWidget {
   const ThirdRoutes({super.key});
 
@@ -10,6 +12,23 @@ class ThirdRoutes extends StatefulWidget {
 class _ThirdRoutesState extends State<ThirdRoutes> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, Routesname.initialRoute);
+              },
+              child: Container(
+                height: 80,
+                width: 250,
+                color: Colors.blueAccent,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
