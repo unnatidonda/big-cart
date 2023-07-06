@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../common/started_container.dart';
+
 class ProductDetail extends StatefulWidget {
   const ProductDetail({super.key});
 
@@ -37,22 +39,32 @@ class _ProductDetailState extends State<ProductDetail> {
             decoration: const BoxDecoration(
               color: Color(0xFFF4F5F9),
             ),
-            child: const Padding(
-              padding: EdgeInsets.all(10),
+            child: Padding(
+              padding: const EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    textAlign: TextAlign.start,
-                    "\$2.22",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18,
-                      color: Color(0xFF28B446),
-                      fontFamily: "Poppins",
-                    ),
+                  Row(
+                    children: [
+                      const Text(
+                        textAlign: TextAlign.start,
+                        "\$2.22",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                          color: Color(0xFF28B446),
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                      const Spacer(),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.favorite_border_rounded),
+                        color: const Color(0xFF868889),
+                      )
+                    ],
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.start,
                     "Organic Lemons",
                     style: TextStyle(
@@ -62,7 +74,7 @@ class _ProductDetailState extends State<ProductDetail> {
                       fontFamily: "Poppins",
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.start,
                     "1.50 lbs",
                     style: TextStyle(
@@ -72,7 +84,7 @@ class _ProductDetailState extends State<ProductDetail> {
                       fontFamily: "Poppins",
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.start,
                     "4.5 (89 reviews)",
                     style: TextStyle(
@@ -82,7 +94,7 @@ class _ProductDetailState extends State<ProductDetail> {
                       fontFamily: "Poppins",
                     ),
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.start,
                     "Organic Mountain works as a seller for many organic growers\n of organic lemons. Organic lemons are easy to spot in your\n produce aisle. They are just like regular lemons, but they will \nusually have a few more scars on the outside of the lemon \nskin. Organic lemons are considered to be the world's finest \nlemon for juicing",
                     style: TextStyle(
@@ -91,6 +103,10 @@ class _ProductDetailState extends State<ProductDetail> {
                       color: Color(0xFF868889),
                       fontFamily: "Poppins",
                     ),
+                  ),
+                  const SizedBox(height: 80),
+                  const StartedContainer(
+                    name: "Add to cart",
                   ),
                 ],
               ),
