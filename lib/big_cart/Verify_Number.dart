@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/started_container.dart';
+import 'otp_screen.dart';
 
 class VerifyNumber extends StatefulWidget {
   const VerifyNumber({Key? key}) : super(key: key);
@@ -101,11 +102,21 @@ class _VerifyNumberState extends State<VerifyNumber> {
             const SizedBox(
               height: 15,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                StartedContainer(
-                  name: "Next",
+                GestureDetector(
+                  child: StartedContainer(
+                    name: "Next",
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OtpScreen(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),

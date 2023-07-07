@@ -18,18 +18,12 @@ class _SearchState extends State<Search> {
           children: [
             Row(
               children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.arrow_back,
-                    color: Colors.black,
-                    size: 30,
-                    weight: 23,
+                BackButton(
+                  style: ButtonStyle(
+                    iconSize: MaterialStateProperty.all(25),
                   ),
+                  color: Color(0xFF000000),
                 ),
-                // TextField(
-                //   style: TextStyle(),
-                // ),
               ],
             ),
             const SizedBox(height: 20),

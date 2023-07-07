@@ -8,13 +8,10 @@ class AllNames extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-            size: 30,
-            weight: 23,
+        BackButton(
+          color: const Color(0xFF000000),
+          style: ButtonStyle(
+            iconSize: MaterialStateProperty.all(25),
           ),
         ),
         const SizedBox(width: 100),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../big_cart/otp_screen.dart';
-
 class StartedContainer extends StatelessWidget {
   final String? name;
   const StartedContainer({Key? key, this.name}) : super(key: key);
@@ -22,14 +20,7 @@ class StartedContainer extends StatelessWidget {
         ),
       ),
       child: TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const OtpScreen(),
-            ),
-          );
-        },
+        onPressed: () {},
         child: Text(
           name ?? "",
           style: TextStyle(

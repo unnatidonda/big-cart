@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
 import '../common/started_container.dart';
+import 'home_screen.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
@@ -58,11 +59,21 @@ class _OtpScreenState extends State<OtpScreen> {
             const SizedBox(
               height: 15,
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                StartedContainer(
-                  name: "Next",
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomeScreen(),
+                      ),
+                    );
+                  },
+                  child: StartedContainer(
+                    name: "Next",
+                  ),
                 ),
               ],
             ),
