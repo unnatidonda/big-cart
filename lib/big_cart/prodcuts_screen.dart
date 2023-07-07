@@ -16,62 +16,78 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
 
   List<Map<String, dynamic>> arrayList = [
     {
+      "price": "\$8.00",
       "itemname": "Vegetables",
-      "image": "assets/category_images/vegetables.png",
+      "text": "dozen",
+      "image": "assets/prodcuts_images/fresh_peach.png",
     },
     {
+      "price": "\$7.00",
       "itemname": "Fruits",
-      "image": "assets/category_images/fruits.png",
+      "text": "2.0 lbs",
+      "image": "assets/prodcuts_images/aocado.png",
     },
     {
+      "price": "\$9.90",
       "itemname": "Beverages",
-      "image": "assets/category_images/beverages.png",
+      "text": "1.50 lbs",
+      "image": "assets/prodcuts_images/pineapple.png",
     },
     {
+      "price": "\$7.05",
       "itemname": "Grocery",
-      "image": "assets/category_images/grocery.png",
+      "text": "5.0 lbs",
+      "image": "assets/prodcuts_images/black_grapes.png",
     },
     {
+      "price": "\$2.09",
       "itemname": "Edibleoil",
-      "image": "assets/category_images/edible_oil.png",
+      "text": "1.50 lbs",
+      "image": "assets/prodcuts_images/pomegranate.png",
     },
     {
+      "price": "\$3.00",
       "itemname": "Household",
-      "image": "assets/category_images/household.png",
-    },
-    {
-      "itemname": "Babycare",
-      "image": "assets/category_images/babycare.png",
+      "text": "1 kg",
+      "image": "assets/prodcuts_images/fresh_b_roccoli.png",
     },
   ];
   List<Map<String, dynamic>> list = [
     {
+      "price": "\$8.00",
       "itemname": "Vegetables",
-      "image": "assets/category_images/vegetables.png",
+      "text": "dozen",
+      "image": "assets/prodcuts_images/fresh_peach.png",
     },
     {
+      "price": "\$7.00",
       "itemname": "Fruits",
-      "image": "assets/category_images/fruits.png",
+      "text": "2.0 lbs",
+      "image": "assets/prodcuts_images/aocado.png",
     },
     {
+      "price": "\$9.90",
       "itemname": "Beverages",
-      "image": "assets/category_images/beverages.png",
+      "text": "1.50 lbs",
+      "image": "assets/prodcuts_images/pineapple.png",
     },
     {
+      "price": "\$7.05",
       "itemname": "Grocery",
-      "image": "assets/category_images/grocery.png",
+      "text": "5.0 lbs",
+      "image": "assets/prodcuts_images/black_grapes.png",
     },
     {
+      "price": "\$2.09",
       "itemname": "Edibleoil",
-      "image": "assets/category_images/edible_oil.png",
+      "text": "1.50 lbs",
+      "image": "assets/prodcuts_images/pomegranate.png",
     },
     {
+      "price": "\$3.00",
       "itemname": "Household",
-      "image": "assets/category_images/household.png",
-    },
-    {
-      "itemname": "Babycare",
-      "image": "assets/category_images/babycare.png",
+      "text": "1 kg",
+      "image": "assets/prodcuts_images/fresh_b_roccoli.png",
     },
   ];
 
@@ -81,7 +97,7 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
                 AllNames(
                   name: "Vegetables",
@@ -94,7 +110,7 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
                 itemCount: 6,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  mainAxisExtent: 140,
+                  mainAxisExtent: 234,
                 ),
                 itemBuilder: (context, index) => Container(
                   decoration: BoxDecoration(
@@ -103,8 +119,8 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      height: 120,
-                      width: 120,
+                      height: 234,
+                      width: 181,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         color: const Color(0xFFFFFFFF),
@@ -116,17 +132,41 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
                           children: [
                             Image.asset(
                               arrayList[index]["image"],
-                              height: 66,
-                              width: 66,
+                              height: 84,
+                              width: 84,
                             ),
                             const SizedBox(height: 10),
                             Text(
-                              arrayList[index]["itemname"],
+                              arrayList[index]["price"],
                               style: const TextStyle(
-                                color: Color(0xFF868889),
-                                fontSize: 12,
+                                color: Color(0xFF6CC51D),
+                                fontSize: 14,
                                 fontWeight: FontWeight.w500,
                               ),
+                            ),
+                            Text(
+                              arrayList[index]["itemname"],
+                              style: const TextStyle(
+                                color: Color(0xFF000000),
+                                fontSize: 16,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+
+                            Text(
+                              arrayList[index]["text"],
+                              style: const TextStyle(
+                                color: Color(0xFF868889),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            const Divider(
+                              color: Color(0xFFEBEBEB),
+                              height: 2,
+                              thickness: 1,
                             ),
                           ],
                         ),

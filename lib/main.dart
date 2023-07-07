@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'big_cart/prodcuts_screen.dart';
+import 'big_cart/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       // initialRoute: Routesname.initialRoute,
       // routes: AppRoutes().approutes,
-      home: const ProdcutsScreen(),
+      home: const Welcome(),
     );
   }
 }

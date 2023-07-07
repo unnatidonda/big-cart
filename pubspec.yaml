@@ -51,6 +51,7 @@ flutter:
     - assets/account_images/notification.png
     - assets/account_images/sign_out.png
     - assets/images/card.png
+    - assets/prodcuts_images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

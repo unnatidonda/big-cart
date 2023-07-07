@@ -68,7 +68,9 @@ class _WelcomeState extends State<Welcome> {
                                   Color(0xFF6CC51D),
                                 ],
                               ),
-                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
