@@ -153,7 +153,6 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-
                             Text(
                               arrayList[index]["text"],
                               style: const TextStyle(
@@ -166,7 +165,7 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
                             const Divider(
                               color: Color(0xFFEBEBEB),
                               height: 2,
-                              thickness: 1,
+                              thickness: 2,
                             ),
                           ],
                         ),
