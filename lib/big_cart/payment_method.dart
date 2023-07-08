@@ -99,15 +99,93 @@ class _PaymentMethodState extends State<PaymentMethod> {
             const SizedBox(height: 20),
             Row(
               children: [
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Container(
                   height: 102,
                   width: 112,
                   decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
+                    color: const Color(0xFFFFFFFF),
                     borderRadius: BorderRadius.circular(15),
                   ),
-                )
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 20),
+                      Image.asset(
+                        "assets/images/paypal.png",
+                        width: 23,
+                        height: 26,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        "Paypal",
+                        style: TextStyle(
+                          color: Color(0xFF868889),
+                          fontSize: 13,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 20),
+                Container(
+                  height: 102,
+                  width: 112,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFFFFF),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 20),
+                      Image.asset(
+                        "assets/images/Credit _Card.png",
+                        width: 32,
+                        height: 23,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        "Credit Card",
+                        style: TextStyle(
+                          color: Color(0xFF868889),
+                          fontSize: 14,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 20),
+                Container(
+                  height: 102,
+                  width: 112,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFFFFF),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 20),
+                      Image.asset(
+                        "assets/images/apple_pay.png",
+                        width: 22,
+                        height: 26,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        "Apple pay",
+                        style: TextStyle(
+                          color: Color(0xFF868889),
+                          fontSize: 13,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 20),
