@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Track_Order extends StatefulWidget {
-  const Track_Order({Key? key}) : super(key: key);
+class TrackOrder extends StatefulWidget {
+  const TrackOrder({Key? key}) : super(key: key);
 
   @override
-  State<Track_Order> createState() => _Track_OrderState();
+  State<TrackOrder> createState() => _TrackOrderState();
 }
 
-class _Track_OrderState extends State<Track_Order> {
+class _TrackOrderState extends State<TrackOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
