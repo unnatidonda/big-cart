@@ -22,8 +22,8 @@ class TextFieldScreen extends StatelessWidget {
               children: [
                 Image.asset(
                   image ?? "",
-                  height: 24,
-                  width: 24,
+                  height: 26,
+                  width: 26,
                 ),
                 const SizedBox(width: 20),
                 Text(

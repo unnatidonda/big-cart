@@ -1,6 +1,6 @@
+import 'package:big_cart/big_cart/forgot_password.dart';
+import 'package:big_cart/big_cart/home_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'auth_signup.dart';
 
 class AuthLogin extends StatefulWidget {
   const AuthLogin({Key? key}) : super(key: key);
@@ -172,12 +172,22 @@ class _AuthLoginState extends State<AuthLogin> {
                         ),
                       ),
                       const SizedBox(width: 70),
-                      const Text(
-                        "Forgot password",
-                        style: TextStyle(
-                          fontSize: 17,
-                          color: Color(0xFF407EC7),
-                          fontWeight: FontWeight.w500,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ForgotPassword(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          "Forgot password",
+                          style: TextStyle(
+                            fontSize: 17,
+                            color: Color(0xFF407EC7),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
                     ],
@@ -203,12 +213,12 @@ class _AuthLoginState extends State<AuthLogin> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const AuthSignup(),
+                                builder: (context) => const HomeScreen(),
                               ),
                             );
                           },
                           child: const Text(
-                            "Signup",
+                            "Login",
                             style: TextStyle(
                               fontSize: 17,
                               color: Color(0xFFFFFFFF),

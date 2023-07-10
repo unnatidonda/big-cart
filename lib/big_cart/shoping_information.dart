@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../common/all_names.dart';
 import '../common/started_container.dart';
 import '../common/textfield_screeen.dart';
+import 'payment_method.dart';
 
 class ShoppingInformation extends StatefulWidget {
   const ShoppingInformation({super.key});
@@ -147,8 +148,18 @@ class _ShoppingInformationState extends State<ShoppingInformation> {
               ),
             ),
             SizedBox(height: 50),
-            StartedContainer(
-              name: "Next",
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PaymentMethod(),
+                  ),
+                );
+              },
+              child: StartedContainer(
+                name: "Next",
+              ),
             ),
           ],
         ),

@@ -1,8 +1,8 @@
+import 'package:big_cart/big_cart/shoping_information.dart';
 import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
 import '../common/started_container.dart';
-import 'shoping_information.dart';
 
 class ShoppingMethod extends StatefulWidget {
   const ShoppingMethod({Key? key}) : super(key: key);

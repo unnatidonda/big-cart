@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/all_names.dart';
 import '../common/started_container.dart';
 
 class ForgotPassword extends StatefulWidget {
@@ -18,22 +19,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           children: [
             Row(
               children: [
-                Padding(
-                  padding: EdgeInsets.all(8),
-                ),
-                Icon(
-                  Icons.arrow_back,
-                  size: 25,
-                ),
-                SizedBox(
-                  width: 65,
-                ),
-                Text(
-                  "Password Recovery",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                  ),
+                AllNames(
+                  name: "Password Recovery",
                 ),
               ],
             ),

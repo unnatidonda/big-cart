@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'about_me.dart';
+import 'auth_signup.dart';
 import 'track_order.dart';
 import 'transactions.dart';
 
@@ -289,7 +290,14 @@ class _AccountScreenState extends State<AccountScreen> {
             Row(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AuthSignup(),
+                      ),
+                    );
+                  },
                   icon: Image.asset(
                     "assets/account_images/sign_out.png",
                     height: 26,

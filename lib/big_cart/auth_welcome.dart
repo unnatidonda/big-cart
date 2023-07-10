@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'auth_login.dart';
+import 'auth_signup.dart';
 
 class AuthWelcome extends StatefulWidget {
   const AuthWelcome({Key? key}) : super(key: key);
@@ -133,7 +134,7 @@ class _AuthWelcomeState extends State<AuthWelcome> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const AuthLogin(),
+                                    builder: (context) => const AuthSignup(),
                                   ),
                                 );
                               },
@@ -163,26 +164,36 @@ class _AuthWelcomeState extends State<AuthWelcome> {
                         ),
                       ),
                       SizedBox(height: 15),
-                      Align(
-                        alignment: Alignment.center,
-                        child: RichText(
-                          textAlign: TextAlign.center,
-                          text: const TextSpan(
-                            text: "Already have an account?",
-                            style: TextStyle(
-                              color: Color(0xFF868889),
-                              fontSize: 18,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AuthLogin(),
                             ),
-                            children: [
-                              TextSpan(
-                                text: " Login",
-                                style: TextStyle(
-                                  color: Color(0xFF000000),
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                          );
+                        },
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: const TextSpan(
+                              text: "Already have an account?",
+                              style: TextStyle(
+                                color: Color(0xFF868889),
+                                fontSize: 18,
                               ),
-                            ],
+                              children: [
+                                TextSpan(
+                                  text: " Login",
+                                  style: TextStyle(
+                                    color: Color(0xFF000000),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

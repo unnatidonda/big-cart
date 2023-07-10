@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
+import '../common/started_container.dart';
+import '../common/textfield_screeen.dart';
 
 class PaymentMethod extends StatefulWidget {
   const PaymentMethod({super.key});
@@ -249,6 +251,99 @@ class _PaymentMethodState extends State<PaymentMethod> {
                   ),
                 ),
               ],
+            ),
+            const Column(
+              children: [
+                SizedBox(height: 15),
+                TextFieldScreen(
+                  name: "Name on the card",
+                  image: "assets/images/person.png",
+                ),
+                SizedBox(height: 15),
+                TextFieldScreen(
+                  name: "Name on the card",
+                  image: "assets/images/Credit _Card.png",
+                ),
+              ],
+            ),
+            const SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        contentPadding: const EdgeInsets.all(20),
+                        isDense: true,
+                        border: InputBorder.none,
+                        filled: true,
+                        fillColor: const Color(0xFFFFFFFF),
+                        suffixIcon: Padding(
+                          padding: const EdgeInsets.all(14),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/images/calendar.png",
+                                height: 26,
+                                width: 26,
+                              ),
+                              const SizedBox(width: 20),
+                              const Text(
+                                "Month / Year",
+                                style: TextStyle(
+                                  color: Color(0xFF9E9E9E),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15,
+                                  fontFamily: "Poppins",
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  const Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(20),
+                        isDense: true,
+                        border: InputBorder.none,
+                        filled: true,
+                        fillColor: Color(0xFFFFFFFF),
+                        suffixIcon: Padding(
+                          padding: EdgeInsets.all(14),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.lock_outline_rounded,
+                                color: Color(0xFF9E9E9E),
+                                size: 25,
+                              ),
+                              SizedBox(width: 20),
+                              Text(
+                                "CVV",
+                                style: TextStyle(
+                                  color: Color(0xFF9E9E9E),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15,
+                                  fontFamily: "Poppins",
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 120),
+            const StartedContainer(
+              name: "Make a  payment",
             ),
           ],
         ),
