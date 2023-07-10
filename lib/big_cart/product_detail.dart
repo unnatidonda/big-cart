@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/started_container.dart';
+import 'reviews_screen.dart';
 
 class ProductDetail extends StatefulWidget {
   const ProductDetail({super.key});
@@ -86,14 +87,33 @@ class _ProductDetailState extends State<ProductDetail> {
                           fontFamily: "Poppins",
                         ),
                       ),
-                      const Text(
-                        textAlign: TextAlign.start,
-                        "4.5 (89 reviews)",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xFF868889),
-                          fontFamily: "Poppins",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ReviewsScreen(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              "assets/images/rating.png",
+                              width: 105,
+                              height: 90,
+                            ),
+                            const Text(
+                              textAlign: TextAlign.start,
+                              "(89 reviews)",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                                color: Color(0xFF868889),
+                                fontFamily: "Poppins",
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       const Text(
@@ -106,7 +126,7 @@ class _ProductDetailState extends State<ProductDetail> {
                           fontFamily: "Poppins",
                         ),
                       ),
-                      const SizedBox(height: 80),
+                      const SizedBox(height: 10),
                       const StartedContainer(
                         name: "Add to cart",
                       ),
