@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'about_me.dart';
-import 'auth_signup.dart';
+import 'auth_welcome.dart';
+import 'favorites_screen.dart';
 import 'track_order.dart';
 import 'transactions.dart';
 
@@ -155,7 +156,14 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 const Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FavoritesScreen(),
+                      ),
+                    );
+                  },
                   icon: const Icon(
                     Icons.arrow_forward_ios,
                     size: 24,
@@ -278,7 +286,14 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 const Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FavoritesScreen(),
+                      ),
+                    );
+                  },
                   icon: const Icon(
                     Icons.arrow_forward_ios,
                     size: 24,
@@ -287,32 +302,35 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
               ],
             ),
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const AuthSignup(),
-                      ),
-                    );
-                  },
-                  icon: Image.asset(
-                    "assets/account_images/sign_out.png",
-                    height: 26,
-                    width: 26,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AuthWelcome(),
                   ),
-                ),
-                const Text(
-                  "Sign out",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontSize: 16,
-                    color: Color(0xFF000000),
+                );
+              },
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset(
+                      "assets/account_images/sign_out.png",
+                      height: 26,
+                      width: 26,
+                    ),
                   ),
-                ),
-              ],
+                  const Text(
+                    "Sign out",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 16,
+                      color: Color(0xFF000000),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

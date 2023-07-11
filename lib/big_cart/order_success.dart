@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
 import '../common/started_container.dart';
+import 'track_order.dart';
 
 class OrderSuccess extends StatefulWidget {
   const OrderSuccess({Key? key}) : super(key: key);
@@ -45,12 +46,22 @@ class _OrderSuccessState extends State<OrderSuccess> {
                 color: Color(0xFF868889),
               ),
             ),
-            const SizedBox(height: 200),
-            const Row(
+            const SizedBox(height: 280),
+            Row(
               children: [
-                SizedBox(width: 12),
-                StartedContainer(
-                  name: "Track order",
+                const SizedBox(width: 17),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TrackOrder(),
+                      ),
+                    );
+                  },
+                  child: const StartedContainer(
+                    name: "Track order",
+                  ),
                 ),
               ],
             ),

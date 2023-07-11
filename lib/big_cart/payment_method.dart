@@ -1,3 +1,4 @@
+import 'package:big_cart/big_cart/order_success.dart';
 import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
@@ -342,8 +343,18 @@ class _PaymentMethodState extends State<PaymentMethod> {
               ),
             ),
             const SizedBox(height: 120),
-            const StartedContainer(
-              name: "Make a  payment",
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OrderSuccess(),
+                  ),
+                );
+              },
+              child: const StartedContainer(
+                name: "Make a  payment",
+              ),
             ),
           ],
         ),

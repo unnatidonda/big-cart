@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/started_container.dart';
+import 'cart_screen.dart';
 import 'reviews_screen.dart';
 
 class ProductDetail extends StatefulWidget {
@@ -127,8 +128,18 @@ class _ProductDetailState extends State<ProductDetail> {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      const StartedContainer(
-                        name: "Add to cart",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CartScreen(),
+                            ),
+                          );
+                        },
+                        child: const StartedContainer(
+                          name: "Add to cart",
+                        ),
                       ),
                     ],
                   ),
