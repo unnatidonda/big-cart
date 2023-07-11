@@ -152,40 +152,6 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 15, right: 15, top: 20),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(20),
-                  isDense: true,
-                  border: InputBorder.none,
-                  filled: true,
-                  fillColor: Color(0xFFFFFFFF),
-                  suffixIcon: Padding(
-                    padding: EdgeInsets.all(14),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.account_circle_outlined,
-                          color: Color(0xFF9E9E9E),
-                          size: 25,
-                        ),
-                        SizedBox(width: 20),
-                        Text(
-                          "Name on the card",
-                          style: TextStyle(
-                            color: Color(0xFF9E9E9E),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 15,
-                            fontFamily: "Poppins",
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
             Row(
               children: [
                 const SizedBox(width: 15),
