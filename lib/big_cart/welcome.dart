@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/started_container.dart';
 import 'default_splash_two.dart';
 
 class Welcome extends StatefulWidget {
@@ -55,47 +56,22 @@ class _WelcomeState extends State<Welcome> {
                       height: 500,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 25, top: 100, right: 15),
+                      padding: const EdgeInsets.only(left: 15, top: 50, right: 15),
                       child: Row(
                         children: [
-                          Container(
+                          StartedContainer(
                             height: 60,
                             width: 360,
-                            decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  Color(0xFFAEDC81),
-                                  Color(0xFF6CC51D),
-                                ],
-                              ),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(5),
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => const DefaultSplashTwo(),
-                                      ),
-                                    );
-                                  },
-                                  child: const Text(
-                                    "Get Started",
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      color: Color(0xFFFFFFFF),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
+                            elevated: "Get Started",
+                            onPress: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const DefaultSplashTwo(),
                                 ),
-                              ],
-                            ),
-                          ),
+                              );
+                            },
+                          )
                         ],
                       ),
                     ),
