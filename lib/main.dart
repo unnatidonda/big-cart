@@ -1,6 +1,5 @@
+import 'package:big_cart/big_cart/about_me.dart';
 import 'package:flutter/material.dart';
-
-import 'big_cart/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       // initialRoute: Routesname.initialRoute,
       // routes: AppRoutes().approutes,
-      home: const Welcome(),
+      home: const AboutMe(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
+import '../common/started_container.dart';
 
 class AboutMe extends StatefulWidget {
   const AboutMe({Key? key}) : super(key: key);
@@ -226,32 +227,46 @@ class _AboutMeState extends State<AboutMe> {
             ),
           ),
           const SizedBox(height: 100),
-          Container(
-            height: 60,
+          StartedContainer(
+            elevated: "Save Setting",
             width: 360,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color(0xFFAEDC81),
-                  Color(0xFF6CC51D),
-                ],
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(5)),
-            ),
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Save settings",
-                  style: TextStyle(
-                    fontSize: 17,
-                    color: Color(0xFFFFFFFF),
-                    fontWeight: FontWeight.w500,
-                  ),
+            height: 60,
+            onPress: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AboutMe(),
                 ),
-              ],
-            ),
+              );
+            },
           ),
+
+          // Container(
+          //   height: 60,
+          //   width: 360,
+          //   decoration: const BoxDecoration(
+          //     gradient: LinearGradient(
+          //       colors: [
+          //         Color(0xFFAEDC81),
+          //         Color(0xFF6CC51D),
+          //       ],
+          //     ),
+          //     borderRadius: BorderRadius.all(Radius.circular(5)),
+          //   ),
+          //   child: const Row(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     children: [
+          //       Text(
+          //         "Save settings",
+          //         style: TextStyle(
+          //           fontSize: 17,
+          //           color: Color(0xFFFFFFFF),
+          //           fontWeight: FontWeight.w500,
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );
