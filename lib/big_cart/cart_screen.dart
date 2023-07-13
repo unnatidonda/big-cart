@@ -446,9 +446,12 @@ class _CartScreenState extends State<CartScreen> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 30),
-                        GestureDetector(
-                          onTap: () {
+                        // const SizedBox(height: 30),
+                        StartedContainer(
+                          elevated: "Checkout",
+                          width: 260,
+                          height: 60,
+                          onPress: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -456,9 +459,6 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                             );
                           },
-                          child: const StartedContainer(
-                            name: "Checkout",
-                          ),
                         ),
                       ],
                     ),

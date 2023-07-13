@@ -46,12 +46,14 @@ class _OrderSuccessState extends State<OrderSuccess> {
                 color: Color(0xFF868889),
               ),
             ),
-            const SizedBox(height: 280),
+            const SizedBox(height: 250),
             Row(
               children: [
                 const SizedBox(width: 17),
-                GestureDetector(
-                  onTap: () {
+                StartedContainer(
+                  elevated: "Track order",
+                  height: 60,
+                  onPress: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -59,9 +61,7 @@ class _OrderSuccessState extends State<OrderSuccess> {
                       ),
                     );
                   },
-                  child: const StartedContainer(
-                    name: "Track order",
-                  ),
+                  width: 360,
                 ),
               ],
             ),

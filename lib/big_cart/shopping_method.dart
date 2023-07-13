@@ -261,16 +261,19 @@ class _ShoppingMethodState extends State<ShoppingMethod> {
               child: Row(
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ShoppingInformation(),
-                        ),
-                      );
-                    },
+                    onTap: () {},
                     child: StartedContainer(
-                      name: "Next",
+                      elevated: "Next",
+                      onPress: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ShoppingInformation(),
+                          ),
+                        );
+                      },
+                      width: 360,
+                      height: 60,
                     ),
                   ),
                 ],

@@ -1,6 +1,8 @@
 import 'package:big_cart/big_cart/forgot_password.dart';
-import 'package:big_cart/big_cart/home_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../common/started_container.dart';
+import 'home_screen.dart';
 
 class AuthLogin extends StatefulWidget {
   const AuthLogin({Key? key}) : super(key: key);
@@ -193,41 +195,18 @@ class _AuthLoginState extends State<AuthLogin> {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Container(
+                  StartedContainer(
                     height: 60,
                     width: 360,
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color(0xFFAEDC81),
-                          Color(0xFF6CC51D),
-                        ],
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const HomeScreen(),
-                              ),
-                            );
-                          },
-                          child: const Text(
-                            "Login",
-                            style: TextStyle(
-                              fontSize: 17,
-                              color: Color(0xFFFFFFFF),
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
+                    elevated: "Login",
+                    onPress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomeScreen(),
                         ),
-                      ],
-                    ),
+                      );
+                    },
                   ),
                   const SizedBox(height: 15),
                   Align(

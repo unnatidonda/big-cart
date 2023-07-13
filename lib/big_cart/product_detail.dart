@@ -128,8 +128,9 @@ class _ProductDetailState extends State<ProductDetail> {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      GestureDetector(
-                        onTap: () {
+                      StartedContainer(
+                        elevated: "Add to cart",
+                        onPress: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -137,9 +138,8 @@ class _ProductDetailState extends State<ProductDetail> {
                             ),
                           );
                         },
-                        child: const StartedContainer(
-                          name: "Add to cart",
-                        ),
+                        height: 60,
+                        width: 360,
                       ),
                     ],
                   ),

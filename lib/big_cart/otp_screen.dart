@@ -62,8 +62,11 @@ class _OtpScreenState extends State<OtpScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GestureDetector(
-                  onTap: () {
+                StartedContainer(
+                  elevated: "Next",
+                  width: 360,
+                  height: 60,
+                  onPress: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -71,9 +74,6 @@ class _OtpScreenState extends State<OtpScreen> {
                       ),
                     );
                   },
-                  child: StartedContainer(
-                    name: "Next",
-                  ),
                 ),
               ],
             ),

@@ -107,16 +107,18 @@ class _VerifyNumberState extends State<VerifyNumber> {
               children: [
                 GestureDetector(
                   child: StartedContainer(
-                    name: "Next",
+                    elevated: "Next",
+                    height: 60,
+                    width: 360,
+                    onPress: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const OtpScreen(),
+                        ),
+                      );
+                    },
                   ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const OtpScreen(),
-                      ),
-                    );
-                  },
                 ),
               ],
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/started_container.dart';
 import 'Verify_Number.dart';
 
 class AuthSignup extends StatefulWidget {
@@ -185,41 +186,18 @@ class _AuthSignupState extends State<AuthSignup> {
                         ),
                       ),
                       const SizedBox(height: 15),
-                      Container(
+                      StartedContainer(
                         height: 60,
                         width: 360,
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFFAEDC81),
-                              Color(0xFF6CC51D),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const VerifyNumber(),
-                                  ),
-                                );
-                              },
-                              child: const Text(
-                                "Signup",
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  color: Color(0xFFFFFFFF),
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
+                        elevated: "Signup",
+                        onPress: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const VerifyNumber(),
                             ),
-                          ],
-                        ),
+                          );
+                        },
                       ),
                       const SizedBox(height: 15),
                       Align(

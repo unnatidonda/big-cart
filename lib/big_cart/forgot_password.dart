@@ -84,7 +84,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 StartedContainer(
-                  name: "Send link",
+                  elevated: "Send link",
+                  width: 360,
+                  height: 60,
                 ),
               ],
             )

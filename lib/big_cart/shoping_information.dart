@@ -148,8 +148,11 @@ class _ShoppingInformationState extends State<ShoppingInformation> {
               ),
             ),
             SizedBox(height: 50),
-            GestureDetector(
-              onTap: () {
+            StartedContainer(
+              elevated: "Next",
+              height: 60,
+              width: 360,
+              onPress: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -157,9 +160,6 @@ class _ShoppingInformationState extends State<ShoppingInformation> {
                   ),
                 );
               },
-              child: StartedContainer(
-                name: "Next",
-              ),
             ),
           ],
         ),

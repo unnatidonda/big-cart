@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/started_container.dart';
 import 'auth_login.dart';
 import 'auth_signup.dart';
 
@@ -114,54 +115,19 @@ class _AuthWelcomeState extends State<AuthWelcome> {
                         ),
                       ),
                       SizedBox(height: 20),
-                      Container(
+                      StartedContainer(
                         height: 60,
                         width: 360,
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFFAEDC81),
-                              Color(0xFF6CC51D),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const AuthSignup(),
-                                  ),
-                                );
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 80),
-                                child: Row(
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/account.png",
-                                      height: 26,
-                                      width: 26,
-                                    ),
-                                    const SizedBox(width: 60),
-                                    const Text(
-                                      "Create an account",
-                                      style: TextStyle(
-                                        fontSize: 17,
-                                        color: Color(0xFFFFFFFF),
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                        // icon: Icons.account_circle_outlined,
+                        elevated: "Create an account",
+                        onPress: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AuthSignup(),
                             ),
-                          ],
-                        ),
+                          );
+                        },
                       ),
                       SizedBox(height: 15),
                       GestureDetector(

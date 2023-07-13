@@ -343,8 +343,11 @@ class _PaymentMethodState extends State<PaymentMethod> {
               ),
             ),
             const SizedBox(height: 120),
-            GestureDetector(
-              onTap: () {
+            StartedContainer(
+              elevated: "Make a  payment",
+              height: 60,
+              width: 360,
+              onPress: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -352,9 +355,6 @@ class _PaymentMethodState extends State<PaymentMethod> {
                   ),
                 );
               },
-              child: const StartedContainer(
-                name: "Make a  payment",
-              ),
             ),
           ],
         ),
