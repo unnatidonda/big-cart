@@ -269,12 +269,14 @@ class _FilterScreenState extends State<FilterScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 170),
+            const SizedBox(height: 200),
             const Row(
               children: [
                 SizedBox(width: 12),
                 StartedContainer(
-                  name: "Apply filter",
+                  elevated: "Apply filter",
+                  width: 360,
+                  height: 60,
                 ),
               ],
             ),

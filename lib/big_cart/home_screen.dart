@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../common/home.dart';
 import 'category_screen.dart';
+import 'filter_screen.dart';
 import 'product_detail.dart';
 import 'search.dart';
 
@@ -103,50 +104,69 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.all(15),
           child: Column(
             children: [
-              const SizedBox(height: 30),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Search(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: double.infinity,
-                  height: 64,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: const Color(0xFFF5F5F5),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.search,
-                            color: Color(0xFF868889),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(15),
+                    isDense: true,
+                    border: InputBorder.none,
+                    filled: true,
+                    fillColor: const Color(0xFFF4F5F9),
+                    suffixIcon: Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Search(),
+                                ),
+                              );
+                            },
+                            icon: const Icon(
+                              Icons.search,
+                              color: Color(0xFF868889),
+                              size: 25,
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text(
-                          "Search keywords..",
-                          style: TextStyle(
-                            color: Color(0xFF868889),
-                            fontSize: 16,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w500,
+                          const SizedBox(width: 20),
+                          const Text(
+                            "Search keywords..",
+                            style: TextStyle(
+                              color: Color(0xFF868889),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15,
+                              fontFamily: "Poppins",
+                            ),
                           ),
-                        ),
-                      ],
+                          const SizedBox(width: 130),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const FilterScreen(),
+                                ),
+                              );
+                            },
+                            child: Image.asset(
+                              "assets/images/filtter.png",
+                              width: 19,
+                              height: 17,
+                              color: const Color(0xFF868889),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Stack(
                 children: [
                   Image.asset(
@@ -166,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              // SizedBox(height: 15),
+              const SizedBox(height: 15),
               Row(
                 children: [
                   const SizedBox(width: 10),
@@ -235,7 +255,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Row(
                 children: [
                   const SizedBox(width: 10),
