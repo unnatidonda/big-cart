@@ -101,8 +101,8 @@ class _MyOrderState extends State<MyOrder> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 12),
-                      Divider(
+                      const SizedBox(height: 12),
+                      const Divider(
                         height: 2,
                         color: Color(0xFFEBEBEB),
                         thickness: 2,
