@@ -9,27 +9,49 @@ class MyOrder extends StatefulWidget {
   State<MyOrder> createState() => _MyOrderState();
 }
 
-// int current_step = 0;
-// List<Step> steps = [
-//   Step(
-//     title: Text('Step 1'),
-//     content: Text('Hello!'),
-//     isActive: true,
-//   ),
-//   Step(
-//     title: Text('Step 2'),
-//     content: Text('World!'),
-//     isActive: true,
-//   ),
-//   Step(
-//     title: Text('Step 3'),
-//     content: Text('Hello World!'),
-//     state: StepState.complete,
-//     isActive: true,
-//   ),
-// ];
-
 class _MyOrderState extends State<MyOrder> {
+  int currentStep = 0;
+
+  get height => 0;
+  continueStep() {
+    setState(() {
+      if (currentStep < 2) {}
+      currentStep = currentStep + 1;
+    });
+  }
+
+  cancelStep() {
+    if (currentStep < 0) {
+      setState(() {
+        currentStep = currentStep - 1;
+      });
+    }
+  }
+
+  onStepTapped(int value) {
+    setState(() {
+      currentStep = value;
+    });
+  }
+
+  Widget controlsBuilder(context, details) {
+    return Row(
+      children: [
+        ElevatedButton(
+          onPressed: details.onStepContinue,
+          child: const Text("Next"),
+        ),
+        SizedBox(width: 10),
+        OutlinedButton(
+          onPressed: details.onStepCancel,
+          child: Text(
+            "Back",
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +76,7 @@ class _MyOrderState extends State<MyOrder> {
               const SizedBox(height: 20),
               Container(
                 width: 380,
-                height: 294,
+                height: 500,
                 decoration: const BoxDecoration(
                   color: Color(0xFFFFFFFF),
                 ),
@@ -127,36 +149,61 @@ class _MyOrderState extends State<MyOrder> {
                         color: Color(0xFFEBEBEB),
                         thickness: 2,
                       ),
-                      // Container(
-                      //   child: Stepper(
-                      //     // currentStep: this.current_step,
-                      //     steps: steps,
-                      //     type: StepperType.vertical,
-                      //     onStepTapped: (step) {
-                      //       setState(() {
-                      //         current_step = step;
-                      //       });
-                      //     },
-                      //     onStepContinue: () {
-                      //       setState(() {
-                      //         if (current_step < steps.length - 1) {
-                      //           current_step = current_step + 1;
-                      //         } else {
-                      //           current_step = 0;
-                      //         }
-                      //       });
-                      //     },
-                      //     onStepCancel: () {
-                      //       setState(() {
-                      //         if (current_step > 0) {
-                      //           current_step = current_step - 1;
-                      //         } else {
-                      //           current_step = 0;
-                      //         }
-                      //       });
-                      //     },
-                      //   ),
-                      // ),
+                      Theme(
+                        data: ThemeData(
+                          canvasColor: Colors.yellow,
+                          colorScheme: Theme.of(context).colorScheme.copyWith(
+                                primary: Colors.green,
+                                background: Colors.red,
+                                secondary: Colors.green,
+                              ),
+                        ),
+                        child: Stepper(
+                          currentStep: currentStep,
+                          onStepContinue: continueStep,
+                          onStepCancel: cancelStep,
+                          onStepTapped: onStepTapped,
+                          controlsBuilder: controlsBuilder,
+                          steps: [
+                            Step(
+                              title: Text(
+                                "Order placed",
+                              ),
+                              content: Text(
+                                "",
+                                // "This is second step",
+                              ),
+                              isActive: currentStep >= 0,
+                            ),
+                            Step(
+                              title: Text(
+                                "Order confirmed",
+                              ),
+                              content: Text(
+                                "This is third step",
+                              ),
+                              isActive: currentStep >= 1,
+                            ),
+                            Step(
+                              title: Text(
+                                "Order shipped",
+                              ),
+                              content: Text(
+                                "This is forth step",
+                              ),
+                              isActive: currentStep >= 2,
+                            ),
+                            Step(
+                              title: Text(
+                                "Order placed",
+                              ),
+                              content: Text(
+                                "This is fifth step",
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
