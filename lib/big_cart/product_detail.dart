@@ -127,7 +127,7 @@ class _ProductDetailState extends State<ProductDetail> {
                           fontFamily: "Poppins",
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      // const SizedBox(height: 10),
                       StartedContainer(
                         elevated: "Add to cart",
                         onPress: () {

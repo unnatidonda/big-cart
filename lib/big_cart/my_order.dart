@@ -41,10 +41,10 @@ class _MyOrderState extends State<MyOrder> {
           onPressed: details.onStepContinue,
           child: const Text("Next"),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         OutlinedButton(
           onPressed: details.onStepCancel,
-          child: Text(
+          child: const Text(
             "Back",
           ),
         ),
@@ -166,34 +166,34 @@ class _MyOrderState extends State<MyOrder> {
                           controlsBuilder: controlsBuilder,
                           steps: [
                             Step(
-                              title: Text(
+                              title: const Text(
                                 "Order placed",
                               ),
-                              content: Text(
+                              content: const Text(
                                 "",
                                 // "This is second step",
                               ),
                               isActive: currentStep >= 0,
                             ),
                             Step(
-                              title: Text(
+                              title: const Text(
                                 "Order confirmed",
                               ),
-                              content: Text(
+                              content: const Text(
                                 "This is third step",
                               ),
                               isActive: currentStep >= 1,
                             ),
                             Step(
-                              title: Text(
+                              title: const Text(
                                 "Order shipped",
                               ),
-                              content: Text(
+                              content: const Text(
                                 "This is forth step",
                               ),
                               isActive: currentStep >= 2,
                             ),
-                            Step(
+                            const Step(
                               title: Text(
                                 "Order placed",
                               ),

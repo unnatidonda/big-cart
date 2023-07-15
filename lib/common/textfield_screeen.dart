@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TextFieldScreen extends StatelessWidget {
-  final String? name;
   final String? image;
-  const TextFieldScreen({Key? key, this.name, this.image}) : super(key: key);
+  final String? hintText;
+  final IconData? icon;
+  const TextFieldScreen({Key? key, this.image, this.hintText, this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,13 @@ class TextFieldScreen extends StatelessWidget {
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(20),
           isDense: true,
+          hintText: "",
+          hintStyle: TextStyle(
+            color: Color(0xFF9E9E9E),
+            fontWeight: FontWeight.w500,
+            fontSize: 15,
+            fontFamily: "Poppins",
+          ),
           border: InputBorder.none,
           filled: true,
           fillColor: const Color(0xFFFFFFFF),
@@ -25,9 +33,15 @@ class TextFieldScreen extends StatelessWidget {
                   height: 26,
                   width: 26,
                 ),
+                // if (icon != null)
+                //   Icon(
+                //     icon!,
+                //     color: Color(0xFF868889),
+                //     size: 25,
+                //   ),
                 const SizedBox(width: 20),
                 Text(
-                  name ?? "",
+                  hintText ?? "",
                   style: const TextStyle(
                     color: Color(0xFF9E9E9E),
                     fontWeight: FontWeight.w500,

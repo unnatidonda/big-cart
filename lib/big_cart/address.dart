@@ -39,40 +39,40 @@ class _AddressState extends State<Address> {
                   ],
                 ),
                 const SizedBox(height: 30),
-                const Column(
+                Column(
                   children: [
                     TextFieldScreen(
-                      name: "Name",
+                      hintText: "Name",
                       // icon: Icons.account_circle_outlined
                     ),
                     SizedBox(height: 10),
                     TextFieldScreen(
-                      name: "Email address",
+                      hintText: "Email address",
                       // icon: Icons.account_circle_outlined
                     ),
                     SizedBox(height: 10),
                     TextFieldScreen(
-                      name: "Phone number",
+                      hintText: "Phone number",
                       // icon: Icons.account_circle_outlined
                     ),
                     SizedBox(height: 10),
                     TextFieldScreen(
-                      name: "Address",
+                      hintText: "Address",
                       // icon: Icons.account_circle_outlined
                     ),
                     SizedBox(height: 10),
                     TextFieldScreen(
-                      name: "Zip code",
+                      hintText: "Zip code",
                       // icon: Icons.account_circle_outlined
                     ),
                     SizedBox(height: 10),
                     TextFieldScreen(
-                      name: "City",
+                      hintText: "City",
                       // icon: Icons.account_circle_outlined
                     ),
                     SizedBox(height: 10),
                     TextFieldScreen(
-                      name: "Country",
+                      hintText: "Country",
                       // icon: Icons.account_circle_outlined
                     ),
                   ],

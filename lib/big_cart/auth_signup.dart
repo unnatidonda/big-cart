@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/started_container.dart';
+import '../common/textfield_screeen.dart';
 import 'Verify_Number.dart';
 
 class AuthSignup extends StatefulWidget {
@@ -87,103 +88,18 @@ class _AuthSignupState extends State<AuthSignup> {
                         ),
                       ),
                       const SizedBox(height: 15),
-                      const Padding(
-                        padding: EdgeInsets.only(left: 15, right: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(20),
-                            isDense: true,
-                            border: InputBorder.none,
-                            filled: true,
-                            fillColor: Color(0xFFFFFFFF),
-                            suffixIcon: Padding(
-                              padding: EdgeInsets.all(14),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.email_outlined,
-                                    color: Color(0xFF9E9E9E),
-                                    size: 25,
-                                  ),
-                                  SizedBox(width: 30),
-                                  Text(
-                                    "Email Address",
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      color: Color(0xFF868889),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                      const TextFieldScreen(
+                        hintText: "Email Address",
+                        image: "assets/images/email.png",
                       ),
                       const SizedBox(height: 8),
-                      const Padding(
-                        padding: EdgeInsets.only(left: 15, right: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(20),
-                            isDense: true,
-                            border: InputBorder.none,
-                            filled: true,
-                            fillColor: Color(0xFFFFFFFF),
-                            suffixIcon: Padding(
-                              padding: EdgeInsets.all(14),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.call_outlined,
-                                    color: Color(0xFF9E9E9E),
-                                    size: 25,
-                                  ),
-                                  SizedBox(width: 30),
-                                  Text(
-                                    "Phone number",
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      color: Color(0xFF868889),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                      const TextFieldScreen(
+                        hintText: "phone number",
+                        image: "assets/images/telephone.png",
                       ),
                       const SizedBox(height: 8),
-                      const Padding(
-                        padding: EdgeInsets.only(left: 15, right: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(20),
-                            isDense: true,
-                            border: InputBorder.none,
-                            filled: true,
-                            fillColor: Color(0xFFFFFFFF),
-                            suffixIcon: Padding(
-                              padding: EdgeInsets.all(14),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.lock_outline_rounded,
-                                    color: Color(0xFF9E9E9E),
-                                    size: 25,
-                                  ),
-                                  Spacer(),
-                                  Icon(
-                                    Icons.remove_red_eye_outlined,
-                                    color: Color(0xFF9E9E9E),
-                                    size: 25,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                      const TextFieldScreen(
+                        image: "assets/images/lock.png",
                       ),
                       const SizedBox(height: 15),
                       StartedContainer(
