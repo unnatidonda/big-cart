@@ -10,6 +10,24 @@ class MyOrder extends StatefulWidget {
 }
 
 class _MyOrderState extends State<MyOrder> {
+  // List<StepperData> stepperData = [
+  //   StepperData(
+  //     title: "Stepper 1",
+  //     subtitle: "Stepper 1 subtitle",
+  //     onTapped: () {
+  //       showCupertinoDialog("Stepper 1", "Stepper 1 subtitle", context);
+  //     },
+  //     isDone: true,
+  //   ),
+  //   StepperData(
+  //     title: "Stepper 2",
+  //     subtitle: "Stepper 2 subtitle",
+  //     onTapped: () {
+  //       showCupertinoDialog("Stepper 2", "Stepper 2 subtitle", context);
+  //     },
+  //     isDone: false,
+  //   ),
+  // ];
   int currentStep = 0;
 
   get height => 0;
@@ -149,61 +167,61 @@ class _MyOrderState extends State<MyOrder> {
                         color: Color(0xFFEBEBEB),
                         thickness: 2,
                       ),
-                      // Theme(
-                      //   data: ThemeData(
-                      //     canvasColor: Colors.yellow,
-                      //     colorScheme: Theme.of(context).colorScheme.copyWith(
-                      //           primary: Colors.green,
-                      //           background: Colors.red,
-                      //           secondary: Colors.green,
-                      //         ),
-                      //   ),
-                      //   child: Stepper(
-                      //     currentStep: currentStep,
-                      //     onStepContinue: continueStep,
-                      //     onStepCancel: cancelStep,
-                      //     onStepTapped: onStepTapped,
-                      //     controlsBuilder: controlsBuilder,
-                      //     steps: [
-                      //       Step(
-                      //         title: const Text(
-                      //           "Order placed",
-                      //         ),
-                      //         content: const Text(
-                      //           "",
-                      //           // "This is second step",
-                      //         ),
-                      //         isActive: currentStep >= 0,
-                      //       ),
-                      //       Step(
-                      //         title: const Text(
-                      //           "Order confirmed",
-                      //         ),
-                      //         content: const Text(
-                      //           "This is third step",
-                      //         ),
-                      //         isActive: currentStep >= 1,
-                      //       ),
-                      //       Step(
-                      //         title: const Text(
-                      //           "Order shipped",
-                      //         ),
-                      //         content: const Text(
-                      //           "This is forth step",
-                      //         ),
-                      //         isActive: currentStep >= 2,
-                      //       ),
-                      //       const Step(
-                      //         title: Text(
-                      //           "Order placed",
-                      //         ),
-                      //         content: Text(
-                      //           "This is fifth step",
-                      //         ),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // ),
+                      Theme(
+                        data: ThemeData(
+                          canvasColor: Colors.yellow,
+                          colorScheme: Theme.of(context).colorScheme.copyWith(
+                                primary: Colors.green,
+                                background: Colors.red,
+                                secondary: Colors.green,
+                              ),
+                        ),
+                        child: Stepper(
+                          currentStep: currentStep,
+                          onStepContinue: continueStep,
+                          onStepCancel: cancelStep,
+                          onStepTapped: onStepTapped,
+                          controlsBuilder: controlsBuilder,
+                          steps: [
+                            Step(
+                              title: const Text(
+                                "Order placed",
+                              ),
+                              content: const Text(
+                                "",
+                                // "This is second step",
+                              ),
+                              isActive: currentStep >= 0,
+                            ),
+                            Step(
+                              title: const Text(
+                                "Order confirmed",
+                              ),
+                              content: const Text(
+                                "This is third step",
+                              ),
+                              isActive: currentStep >= 1,
+                            ),
+                            Step(
+                              title: const Text(
+                                "Order shipped",
+                              ),
+                              content: const Text(
+                                "This is forth step",
+                              ),
+                              isActive: currentStep >= 2,
+                            ),
+                            const Step(
+                              title: Text(
+                                "Order placed",
+                              ),
+                              content: Text(
+                                "This is fifth step",
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
