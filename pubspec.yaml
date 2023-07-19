@@ -19,6 +19,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   simple_horizontal_stepper: ^0.0.1
   motion_tab_bar_v2: ^0.3.0
+  order_tracker: ^0.0.2
+
 
 dev_dependencies:
   flutter_test:

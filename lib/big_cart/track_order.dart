@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_tracker/order_tracker.dart';
 
 class TrackOrder extends StatefulWidget {
   const TrackOrder({Key? key}) : super(key: key);
@@ -8,6 +9,24 @@ class TrackOrder extends StatefulWidget {
 }
 
 class _TrackOrderState extends State<TrackOrder> {
+  List<TextDto> orderList = [
+    TextDto("Your order has been placed", "Fri, 25th Mar '22 - 10:47pm"),
+    TextDto("Seller ha processed your order", "Sun, 27th Mar '22 - 10:19am"),
+    TextDto("Your item has been picked up by courier partner.", "Tue, 29th Mar '22 - 5:00pm"),
+  ];
+
+  List<TextDto> shippedList = [
+    TextDto("Your order has been shipped", "Tue, 29th Mar '22 - 5:04pm"),
+    TextDto("Your item has been received in the nearest hub to you.", null),
+  ];
+
+  List<TextDto> outOfDeliveryList = [
+    TextDto("Your order is out for delivery", "Thu, 31th Mar '22 - 2:27pm"),
+  ];
+
+  List<TextDto> deliveredList = [
+    TextDto("Your order has been delivered", "Thu, 31th Mar '22 - 3:58pm"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,10 +54,10 @@ class _TrackOrderState extends State<TrackOrder> {
             const SizedBox(height: 20),
             Row(
               children: [
-                const SizedBox(width: 15),
+                const SizedBox(width: 16),
                 Container(
                   height: 80,
-                  width: 360,
+                  width: 380,
                   decoration: const BoxDecoration(
                     color: Color(0xFFFFFFFF),
                   ),
@@ -71,9 +90,9 @@ class _TrackOrderState extends State<TrackOrder> {
                               "Order #90897 ",
                               style: TextStyle(
                                 color: Color(0xFF000000),
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w700,
                                 fontFamily: "Poppins",
-                                fontSize: 15,
+                                fontSize: 16,
                               ),
                             ),
                           ),
@@ -92,7 +111,7 @@ class _TrackOrderState extends State<TrackOrder> {
                           Padding(
                             padding: EdgeInsets.only(left: 10),
                             child: Text(
-                              "Items: 10 Items: \$16.90",
+                              "Items: 10   Items: \$16.90",
                               style: TextStyle(
                                 color: Color(0xFF000000),
                                 fontWeight: FontWeight.w600,
@@ -107,6 +126,18 @@ class _TrackOrderState extends State<TrackOrder> {
                   ),
                 ),
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: OrderTracker(
+                status: Status.delivered,
+                activeColor: Colors.green,
+                inActiveColor: Colors.grey[300],
+                orderTitleAndDateList: orderList,
+                shippedTitleAndDateList: shippedList,
+                outOfDeliveryTitleAndDateList: outOfDeliveryList,
+                deliveredTitleAndDateList: deliveredList,
+              ),
             ),
           ],
         ),

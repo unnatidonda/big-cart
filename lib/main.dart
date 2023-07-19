@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'big_cart/bottom_navigation_screen.dart';
+import 'big_cart/track_order.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       // initialRoute: Routesname.initialRoute,
       // routes: AppRoutes().approutes,
-      home: const BottomNavigationScreen(),
+      home: const TrackOrder(),
     );
   }
 }
