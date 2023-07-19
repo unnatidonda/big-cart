@@ -167,61 +167,61 @@ class _MyOrderState extends State<MyOrder> {
                         color: Color(0xFFEBEBEB),
                         thickness: 2,
                       ),
-                      Theme(
-                        data: ThemeData(
-                          canvasColor: Colors.yellow,
-                          colorScheme: Theme.of(context).colorScheme.copyWith(
-                                primary: Colors.green,
-                                background: Colors.red,
-                                secondary: Colors.green,
-                              ),
-                        ),
-                        child: Stepper(
-                          currentStep: currentStep,
-                          onStepContinue: continueStep,
-                          onStepCancel: cancelStep,
-                          onStepTapped: onStepTapped,
-                          controlsBuilder: controlsBuilder,
-                          steps: [
-                            Step(
-                              title: const Text(
-                                "Order placed",
-                              ),
-                              content: const Text(
-                                "",
-                                // "This is second step",
-                              ),
-                              isActive: currentStep >= 0,
-                            ),
-                            Step(
-                              title: const Text(
-                                "Order confirmed",
-                              ),
-                              content: const Text(
-                                "This is third step",
-                              ),
-                              isActive: currentStep >= 1,
-                            ),
-                            Step(
-                              title: const Text(
-                                "Order shipped",
-                              ),
-                              content: const Text(
-                                "This is forth step",
-                              ),
-                              isActive: currentStep >= 2,
-                            ),
-                            const Step(
-                              title: Text(
-                                "Order placed",
-                              ),
-                              content: Text(
-                                "This is fifth step",
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      // Theme(
+                      //   data: ThemeData(
+                      //     canvasColor: Colors.yellow,
+                      //     colorScheme: Theme.of(context).colorScheme.copyWith(
+                      //           primary: Colors.green,
+                      //           background: Colors.red,
+                      //           secondary: Colors.green,
+                      //         ),
+                      //   ),
+                      //   child: Stepper(
+                      //     currentStep: currentStep,
+                      //     onStepContinue: continueStep,
+                      //     onStepCancel: cancelStep,
+                      //     onStepTapped: onStepTapped,
+                      //     controlsBuilder: controlsBuilder,
+                      //     steps: [
+                      //       Step(
+                      //         title: const Text(
+                      //           "Order placed",
+                      //         ),
+                      //         content: const Text(
+                      //           "",
+                      //           // "This is second step",
+                      //         ),
+                      //         isActive: currentStep >= 0,
+                      //       ),
+                      //       Step(
+                      //         title: const Text(
+                      //           "Order confirmed",
+                      //         ),
+                      //         content: const Text(
+                      //           "This is third step",
+                      //         ),
+                      //         isActive: currentStep >= 1,
+                      //       ),
+                      //       Step(
+                      //         title: const Text(
+                      //           "Order shipped",
+                      //         ),
+                      //         content: const Text(
+                      //           "This is forth step",
+                      //         ),
+                      //         isActive: currentStep >= 2,
+                      //       ),
+                      //       const Step(
+                      //         title: Text(
+                      //           "Order placed",
+                      //         ),
+                      //         content: Text(
+                      //           "This is fifth step",
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

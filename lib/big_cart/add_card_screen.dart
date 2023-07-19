@@ -258,7 +258,9 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 const Padding(
                   padding: EdgeInsets.only(top: 220),
                   child: StartedContainer(
-                    name: "Add credit card",
+                    elevated: "Add credit card",
+                    height: 60,
+                    width: 360,
                   ),
                 ),
               ],

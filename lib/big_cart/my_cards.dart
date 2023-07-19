@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
 import '../common/started_container.dart';
+import 'add_card_screen.dart';
 
 class MyCards extends StatefulWidget {
   const MyCards({super.key});
@@ -30,7 +31,14 @@ class _MyCardsState extends State<MyCards> {
                       ),
                       const Spacer(),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AddCardScreen(),
+                            ),
+                          );
+                        },
                         icon: const Icon(
                           Icons.add_circle_outline,
                           size: 25,
@@ -425,8 +433,11 @@ class _MyCardsState extends State<MyCards> {
                     ],
                   ),
                   const SizedBox(height: 100),
-                  GestureDetector(
-                    onTap: () {
+                  StartedContainer(
+                    elevated: "Save settings",
+                    height: 60,
+                    width: 380,
+                    onPress: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -434,9 +445,6 @@ class _MyCardsState extends State<MyCards> {
                         ),
                       );
                     },
-                    child: const StartedContainer(
-                      name: "Save settings",
-                    ),
                   ),
                 ],
               ),

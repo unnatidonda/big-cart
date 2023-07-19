@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'about_me.dart';
 import 'auth_welcome.dart';
 import 'favorites_screen.dart';
+import 'my_address.dart';
+import 'my_cards.dart';
 import 'track_order.dart';
 import 'transactions.dart';
 
@@ -192,7 +194,14 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 const Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MyAddress(),
+                      ),
+                    );
+                  },
                   icon: const Icon(
                     Icons.arrow_forward_ios,
                     size: 24,
@@ -221,7 +230,14 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 const Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MyCards(),
+                      ),
+                    );
+                  },
                   icon: const Icon(
                     Icons.arrow_forward_ios,
                     size: 24,

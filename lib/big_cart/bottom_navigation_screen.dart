@@ -15,10 +15,10 @@ class BottomNavigationScreen extends StatefulWidget {
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int currentIndex = 0;
   List<Widget> ScreenList = [
-    ProductDetail(),
-    AccountScreen(),
-    FavoritesScreen(),
-    HomeScreen(),
+    const ProductDetail(),
+    const AccountScreen(),
+    const FavoritesScreen(),
+    const HomeScreen(),
   ];
 
   @override
@@ -33,10 +33,10 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         },
         currentIndex: currentIndex,
         // backgroundColor: Colors.white,
-        selectedLabelStyle: TextStyle(),
+        selectedLabelStyle: const TextStyle(),
         showSelectedLabels: true,
         selectedItemColor: Colors.black,
-        unselectedItemColor: Color(0xFF808080),
+        unselectedItemColor: const Color(0xFF808080),
         type: BottomNavigationBarType.shifting,
         items: const [
           BottomNavigationBarItem(

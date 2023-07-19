@@ -75,7 +75,9 @@ class _WriteReviewScreenState extends State<WriteReviewScreen> {
               ),
             ),
             const StartedContainer(
-              name: "Start shopping",
+              width: 380,
+              height: 60,
+              elevated: "Start shopping",
             ),
           ],
         ),
