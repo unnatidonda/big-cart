@@ -1,6 +1,8 @@
 import 'package:big_cart/common/all_notification.dart';
 import 'package:flutter/material.dart';
 
+import '../common/started_container.dart';
+
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({Key? key}) : super(key: key);
 
@@ -60,44 +62,23 @@ class _NotificationScreen extends State<NotificationScreen> {
                 ],
               ),
             ),
-            // Switch(
-            //   activeColor: Colors.black,
-            //   inactiveThumbColor: Colors.purpleAccent,
-            //   activeTrackColor: Colors.purple,
-            //   hoverColor: Colors.pinkAccent,
-            //   onChanged: (value) {
-            //     debugPrint("value ----> $value");
-            //     setState(() {
-            //       switchvalue = value;
-            //     });
-            //   },
-            //   value: switchvalue,
-            // ),
+            Switch(
+              activeColor: Colors.white,
+              activeTrackColor: const Color(0xFF6CC51D),
+              hoverColor: const Color(0xFF6CC51D),
+              onChanged: (value) {
+                debugPrint("value ----> $value");
+                setState(() {
+                  switchvalue = value;
+                });
+              },
+              value: switchvalue,
+            ),
             const SizedBox(height: 180),
-            Container(
+            const StartedContainer(
+              width: 380,
               height: 60,
-              width: 360,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    Color(0xFFAEDC81),
-                    Color(0xFF6CC51D),
-                  ],
-                ),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: const Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Save settings",
-                  style: TextStyle(
-                    color: Color(0xFFFFFFFF),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 13,
-                    fontFamily: "poppins",
-                  ),
-                ),
-              ),
+              elevated: "Save Setting",
             ),
           ],
         ),

@@ -5,6 +5,7 @@ import 'auth_welcome.dart';
 import 'favorites_screen.dart';
 import 'my_address.dart';
 import 'my_cards.dart';
+import 'notification_screen.dart';
 import 'track_order.dart';
 import 'transactions.dart';
 
@@ -306,7 +307,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FavoritesScreen(),
+                        builder: (context) => const NotificationScreen(),
                       ),
                     );
                   },

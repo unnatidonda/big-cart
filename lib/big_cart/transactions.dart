@@ -33,9 +33,9 @@ class _TransactionsState extends State<Transactions> {
                 ),
               ],
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 20),
             Padding(
-              padding: EdgeInsets.only(left: 12, right: 12),
+              padding: EdgeInsets.all(15),
               child: Column(
                 children: [
                   Row(

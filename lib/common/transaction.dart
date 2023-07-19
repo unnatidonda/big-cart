@@ -9,59 +9,61 @@ class Transaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          height: 80,
-          width: 365,
-          decoration: const BoxDecoration(
-            color: Color(0xFFFFFFFF),
-          ),
-          child: Row(
-            children: [
-              const SizedBox(width: 15),
-              Image.asset(
-                image ?? "",
-                height: 52,
-                width: 52,
-              ),
-              const SizedBox(width: 20),
-              RichText(
-                text: const TextSpan(
-                  text: "Master Card",
+    return Expanded(
+      child: Row(
+        children: [
+          Container(
+            height: 80,
+            width: 380,
+            decoration: const BoxDecoration(
+              color: Color(0xFFFFFFFF),
+            ),
+            child: Row(
+              children: [
+                const SizedBox(width: 15),
+                Image.asset(
+                  image ?? "",
+                  height: 52,
+                  width: 52,
+                ),
+                const SizedBox(width: 20),
+                RichText(
+                  text: const TextSpan(
+                    text: "Master Card",
+                    style: TextStyle(
+                      color: Color(0xFF000000),
+                      fontSize: 15,
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w600,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "\nDec 12 2021 at 10:00 pm",
+                        style: TextStyle(
+                          color: Color(0xFF000000),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 90),
+                Text(
+                  price ?? "",
                   style: TextStyle(
-                    color: Color(0xFF000000),
+                    color: Color(0xFF28B446),
+                    fontWeight: FontWeight.w600,
                     fontSize: 15,
                     fontFamily: "Poppins",
-                    fontWeight: FontWeight.w600,
                   ),
-                  children: [
-                    TextSpan(
-                      text: "\nDec 12 2021 at 10:00 pm",
-                      style: TextStyle(
-                        color: Color(0xFF000000),
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: "Poppins",
-                      ),
-                    ),
-                  ],
                 ),
-              ),
-              const SizedBox(width: 90),
-              Text(
-                price ?? "",
-                style: TextStyle(
-                  color: Color(0xFF28B446),
-                  fontWeight: FontWeight.w600,
-                  fontSize: 15,
-                  fontFamily: "Poppins",
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
