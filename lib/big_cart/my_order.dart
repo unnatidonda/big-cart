@@ -12,7 +12,7 @@ class MyOrder extends StatefulWidget {
 
 class _MyOrderState extends State<MyOrder> {
   List<TextDto> Orderplaced = [
-    TextDto("", "Fri, 25th Mar '22 - 10:47pm"),
+    TextDto("", " "),
   ];
 
   List<TextDto> Orderconfirmed = [
