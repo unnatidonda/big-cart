@@ -231,7 +231,7 @@ class _MyOrderState extends State<MyOrder> {
                             shippedTitleAndDateList: Orderconfirmed,
                             outOfDeliveryTitleAndDateList: Ordershipped,
                             deliveredTitleAndDateList: Outfordelivery,
-                            headingTitleStyle: const TextStyle(
+                            headingTitleStyle: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontFamily: "Poppins",
                               fontSize: 18,
