@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Search_History extends StatelessWidget {
+class SearchHistory extends StatelessWidget {
   final String? name;
-  const Search_History({Key? key, this.name}) : super(key: key);
+  const SearchHistory({Key? key, this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

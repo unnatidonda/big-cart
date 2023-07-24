@@ -15,7 +15,7 @@ class TextFieldScreen extends StatelessWidget {
           contentPadding: const EdgeInsets.all(20),
           isDense: true,
           hintText: "",
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             color: Color(0xFF9E9E9E),
             fontWeight: FontWeight.w500,
             fontSize: 15,
@@ -25,7 +25,7 @@ class TextFieldScreen extends StatelessWidget {
           filled: true,
           fillColor: const Color(0xFFFFFFFF),
           suffixIcon: Padding(
-            padding: EdgeInsets.all(14),
+            padding: const EdgeInsets.all(14),
             child: Row(
               children: [
                 Image.asset(

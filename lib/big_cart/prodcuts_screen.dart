@@ -130,10 +130,27 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              arrayList[index]["image"],
-                              height: 84,
-                              width: 84,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  arrayList[index]["image"],
+                                  height: 84,
+                                  width: 84,
+                                ),
+                                // IconButton(
+                                //   onPressed: () {},
+                                //   icon: Icon(
+                                //     Icons.favorite_border_rounded,
+                                //   ),
+                                //   color: Colors.grey,
+                                //   focusColor: Colors.red,
+                                //   disabledColor: Colors.red,
+                                //   highlightColor: Colors.red,
+                                //   hoverColor: Colors.red,
+                                // ),
+                              ],
                             ),
                             const SizedBox(height: 10),
                             Text(
@@ -167,6 +184,27 @@ class _ProdcutsScreenState extends State<ProdcutsScreen> {
                               height: 2,
                               thickness: 2,
                             ),
+                            const SizedBox(height: 3),
+                            Row(
+                              children: [
+                                const SizedBox(width: 15),
+                                Image.asset(
+                                  "assets/images/add_to_cart.png",
+                                  height: 22,
+                                  width: 21,
+                                ),
+                                const SizedBox(width: 15),
+                                const Text(
+                                  "Add to Cart",
+                                  style: TextStyle(
+                                    color: Color(0xFF010101),
+                                    fontSize: 13,
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            )
                           ],
                         ),
                       ),

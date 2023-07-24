@@ -105,20 +105,18 @@ class _VerifyNumberState extends State<VerifyNumber> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GestureDetector(
-                  child: StartedContainer(
-                    elevated: "Next",
-                    height: 60,
-                    width: 360,
-                    onPress: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const OtpScreen(),
-                        ),
-                      );
-                    },
-                  ),
+                StartedContainer(
+                  elevated: "Next",
+                  height: 60,
+                  width: 360,
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OtpScreen(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),

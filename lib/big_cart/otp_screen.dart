@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../common/all_names.dart';
 import '../common/started_container.dart';
-import 'home_screen.dart';
+import 'bottom_navigation_screen.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
@@ -70,7 +70,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
+                        builder: (context) => const BottomNavigationScreen(),
                       ),
                     );
                   },

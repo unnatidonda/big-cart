@@ -106,23 +106,23 @@ class _SearchState extends State<Search> {
                       padding: EdgeInsets.only(top: 18, left: 5, right: 5),
                       child: Row(
                         children: [
-                          Search_History(
+                          SearchHistory(
                             name: "Fresh Grocery",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "Bananas",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "cheetos",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "vegetables",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "Fruits",
                           ),
                         ],
@@ -212,23 +212,23 @@ class _SearchState extends State<Search> {
                       padding: EdgeInsets.only(top: 18, left: 5, right: 5),
                       child: Row(
                         children: [
-                          Search_History(
+                          SearchHistory(
                             name: "Fresh Grocery",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "Bananas",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "cheetos",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "vegetables",
                           ),
                           SizedBox(width: 5),
-                          Search_History(
+                          SearchHistory(
                             name: "Fruits",
                           ),
                         ],
