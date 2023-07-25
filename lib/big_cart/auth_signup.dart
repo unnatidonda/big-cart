@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../common/started_container.dart';
-import '../common/textfield_screeen.dart';
 import 'Verify_Number.dart';
 
 class AuthSignup extends StatefulWidget {
@@ -87,20 +86,88 @@ class _AuthSignupState extends State<AuthSignup> {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 15),
-                      const TextFieldScreen(
-                        hintText: "Email Address",
-                        image: "assets/images/email.png",
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (!RegExp(r"^[a-z0-9]").hasMatch(value!)) {
+                              return "Please enter  fullName";
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.all(20),
+                            isDense: true,
+                            border: InputBorder.none,
+                            hintText: "full Name",
+                            filled: true,
+                            fillColor: Color(0xFFFFFFFF),
+                            hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
+                          ),
+                          onTap: () {},
+                        ),
                       ),
-                      const SizedBox(height: 8),
-                      const TextFieldScreen(
-                        hintText: "phone number",
-                        image: "assets/images/telephone.png",
+                      Padding(
+                        padding: const EdgeInsets.all(7),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (!RegExp(r"^(?:[+0]9)?[0-9]{10,12}$").hasMatch(value!)) {
+                              return "Please enter valid number";
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.all(20),
+                            isDense: true,
+                            border: InputBorder.none,
+                            hintText: "phone",
+                            filled: true,
+                            fillColor: Color(0xFFFFFFFF),
+                            hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
+                          ),
+                          onTap: () {},
+                        ),
                       ),
-                      const SizedBox(height: 8),
-                      const TextFieldScreen(
-                        image: "assets/images/lock.png",
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value!)) {
+                              return "Please enter valid email";
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.all(20),
+                            isDense: true,
+                            border: InputBorder.none,
+                            hintText: "Email",
+                            filled: true,
+                            fillColor: Color(0xFFFFFFFF),
+                            hintStyle: TextStyle(
+                              color: Color(0xFF9E9E9E),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Poppins",
+                            ),
+                          ),
+                          onTap: () {},
+                        ),
                       ),
+
+                      // const TextFieldScreen(
+                      //   hintText: "Email Address",
+                      //   image: "assets/images/email.png",
+                      // ),
+                      // const SizedBox(height: 8),
+                      // const TextFieldScreen(
+                      //   hintText: "phone number",
+                      //   image: "assets/images/telephone.png",
+                      // ),
+                      // const SizedBox(height: 8),
+                      // const TextFieldScreen(
+                      //   image: "assets/images/lock.png",
+                      // ),
                       const SizedBox(height: 15),
                       StartedContainer(
                         height: 60,
