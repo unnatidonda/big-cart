@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/started_container.dart';
+import '../common/textfield_screeen.dart';
 import 'Verify_Number.dart';
 
 class AuthSignup extends StatefulWidget {
@@ -86,50 +87,30 @@ class _AuthSignupState extends State<AuthSignup> {
                           ],
                         ),
                       ),
+                      // Padding(
+                      //   padding: const EdgeInsets.all(10),
+                      //   child: TextFormField(
+                      //     validator: (value) {
+                      //       if (!RegExp(r"^[a-z0-9]").hasMatch(value!)) {
+                      //         return "Please enter  fullName";
+                      //       }
+                      //       return null;
+                      //     },
+                      //     decoration: const InputDecoration(
+                      //       contentPadding: EdgeInsets.all(20),
+                      //       isDense: true,
+                      //       border: InputBorder.none,
+                      //       hintText: "full Name",
+                      //       filled: true,
+                      //       fillColor: Color(0xFFFFFFFF),
+                      //       hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
+                      //     ),
+                      //     onTap: () {},
+                      //   ),
+                      // ),
+
                       Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: TextFormField(
-                          validator: (value) {
-                            if (!RegExp(r"^[a-z0-9]").hasMatch(value!)) {
-                              return "Please enter  fullName";
-                            }
-                            return null;
-                          },
-                          decoration: const InputDecoration(
-                            contentPadding: EdgeInsets.all(20),
-                            isDense: true,
-                            border: InputBorder.none,
-                            hintText: "full Name",
-                            filled: true,
-                            fillColor: Color(0xFFFFFFFF),
-                            hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
-                          ),
-                          onTap: () {},
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(7),
-                        child: TextFormField(
-                          validator: (value) {
-                            if (!RegExp(r"^(?:[+0]9)?[0-9]{10,12}$").hasMatch(value!)) {
-                              return "Please enter valid number";
-                            }
-                            return null;
-                          },
-                          decoration: const InputDecoration(
-                            contentPadding: EdgeInsets.all(20),
-                            isDense: true,
-                            border: InputBorder.none,
-                            hintText: "phone",
-                            filled: true,
-                            fillColor: Color(0xFFFFFFFF),
-                            hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
-                          ),
-                          onTap: () {},
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                         child: TextFormField(
                           validator: (value) {
                             if (!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value!)) {
@@ -141,8 +122,12 @@ class _AuthSignupState extends State<AuthSignup> {
                             contentPadding: EdgeInsets.all(20),
                             isDense: true,
                             border: InputBorder.none,
-                            hintText: "Email",
+                            hintText: "Email address",
                             filled: true,
+                            icon: Icon(
+                              Icons.email_outlined,
+                              color: Color(0xFF9E9E9E),
+                            ),
                             fillColor: Color(0xFFFFFFFF),
                             hintStyle: TextStyle(
                               color: Color(0xFF9E9E9E),
@@ -154,7 +139,27 @@ class _AuthSignupState extends State<AuthSignup> {
                           onTap: () {},
                         ),
                       ),
-
+                      Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (!RegExp(r"^(?:[+0]9)?[0-9]{10,12}$").hasMatch(value!)) {
+                              return "Please enter valid number";
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.all(20),
+                            isDense: true,
+                            border: InputBorder.none,
+                            hintText: "phone Number",
+                            filled: true,
+                            fillColor: Color(0xFFFFFFFF),
+                            hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
+                          ),
+                          onTap: () {},
+                        ),
+                      ),
                       // const TextFieldScreen(
                       //   hintText: "Email Address",
                       //   image: "assets/images/email.png",
@@ -164,10 +169,10 @@ class _AuthSignupState extends State<AuthSignup> {
                       //   hintText: "phone number",
                       //   image: "assets/images/telephone.png",
                       // ),
-                      // const SizedBox(height: 8),
-                      // const TextFieldScreen(
-                      //   image: "assets/images/lock.png",
-                      // ),
+                      const SizedBox(height: 8),
+                      const TextFieldScreen(
+                        image: "assets/images/lock.png",
+                      ),
                       const SizedBox(height: 15),
                       StartedContainer(
                         height: 60,
