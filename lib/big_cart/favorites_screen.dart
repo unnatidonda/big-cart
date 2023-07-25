@@ -45,13 +45,10 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                     name: "aocado",
                   ),
                   SizedBox(height: 15),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Favorite(
-                      color: Color(0xFFFFE6C2),
-                      image: "assets/prodcuts_images/pineapple.png",
-                      name: "pineapple",
-                    ),
+                  Favorite(
+                    color: Color(0xFFFFE6C2),
+                    image: "assets/prodcuts_images/pineapple.png",
+                    name: "pineapple",
                   ),
                 ],
               ),
