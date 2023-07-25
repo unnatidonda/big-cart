@@ -11,6 +11,12 @@ class TextFieldScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 15, right: 15),
       child: TextField(
+        // validator: (value) {
+        //   if (!RegExp(r"(?:19|20)\d\d").hasMatch(value!)) {
+        //     return "Please enter valid birthdate";
+        //   }
+        //   return null;
+        // },
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(20),
           isDense: true,
