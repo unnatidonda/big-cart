@@ -50,148 +50,77 @@ class TextFieldScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(8),
-                    ),
-                    child: TextFormField(
-                      validator: (value) {
-                        if (!RegExp(r"^[a-z0-9]").hasMatch(value!)) {
-                          return "Please enter  fullName";
-                        }
-                        return null;
-                      },
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(20),
-                        isDense: true,
-                        border: InputBorder.none,
-                        hintText: "full Name",
-                        filled: true,
-                        fillColor: Color(0xFFF5F5F5),
-                        hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
-                      ),
-                      onTap: () {},
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(8),
-                    ),
-                    child: TextFormField(
-                      validator: (value) {
-                        if (!RegExp(r"^(?:[+0]9)?[0-9]{10,12}$").hasMatch(value!)) {
-                          return "Please enter valid number";
-                        }
-                        return null;
-                      },
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(20),
-                        isDense: true,
-                        border: InputBorder.none,
-                        hintText: "phone",
-                        filled: true,
-                        fillColor: Color(0xFFF5F5F5),
-                        hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
-                      ),
-                      onTap: () {},
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(8),
-                    ),
-                    child: TextFormField(
-                      validator: (value) {
-                        if (!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value!)) {
-                          return "Please enter valid email";
-                        }
-                        return null;
-                      },
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(20),
-                        isDense: true,
-                        border: InputBorder.none,
-                        hintText: "Email",
-                        filled: true,
-                        fillColor: Color(0xFFF5F5F5),
-                        hintStyle: TextStyle(
-                          color: Color(0xFF9E9E9E),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Poppins",
+                  padding: const EdgeInsets.only(left: 15, right: 15),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            contentPadding: const EdgeInsets.all(20),
+                            isDense: true,
+                            border: InputBorder.none,
+                            filled: true,
+                            fillColor: const Color(0xFFFFFFFF),
+                            suffixIcon: Padding(
+                              padding: const EdgeInsets.all(14),
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    "assets/images/calendar.png",
+                                    height: 26,
+                                    width: 26,
+                                  ),
+                                  const SizedBox(width: 20),
+                                  const Text(
+                                    "Month / Year",
+                                    style: TextStyle(
+                                      color: Color(0xFF9E9E9E),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      fontFamily: "Poppins",
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                      onTap: () {},
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(8),
-                    ),
-                    child: TextFormField(
-                      validator: (value) {
-                        if (!RegExp(r"(?:19|20)\d\d").hasMatch(value!)) {
-                          return "Please enter valid birthdate";
-                        }
-                        return null;
-                      },
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(20),
-                        isDense: true,
-                        border: InputBorder.none,
-                        hintText: "date of birth",
-                        filled: true,
-                        fillColor: Color(0xFFF5F5F5),
-                        hintStyle: TextStyle(
-                          color: Color(0xFF9E9E9E),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Poppins",
+                      const SizedBox(width: 10),
+                      const Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(20),
+                            isDense: true,
+                            border: InputBorder.none,
+                            filled: true,
+                            fillColor: Color(0xFFFFFFFF),
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.all(14),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.lock_outline_rounded,
+                                    color: Color(0xFF9E9E9E),
+                                    size: 25,
+                                  ),
+                                  SizedBox(width: 20),
+                                  Text(
+                                    "CVV",
+                                    style: TextStyle(
+                                      color: Color(0xFF9E9E9E),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      fontFamily: "Poppins",
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                      onTap: () {},
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(8),
-                    ),
-                    child: TextFormField(
-                      validator: (value) {
-                        if (!RegExp(r"(?:19|20)\d\d").hasMatch(value!)) {
-                          return "Please enter valid birthdate";
-                        }
-                        return null;
-                      },
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(20),
-                        isDense: true,
-                        border: InputBorder.none,
-                        hintText: "date of birth",
-                        filled: true,
-                        fillColor: Color(0xFFF5F5F5),
-                        hintStyle: TextStyle(
-                          color: Color(0xFF9E9E9E),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Poppins",
-                        ),
-                      ),
-                      onTap: () {},
-                    ),
+                    ],
                   ),
                 ),
               ],
