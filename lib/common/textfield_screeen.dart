@@ -122,35 +122,33 @@ class TextFieldScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 15, right: 15),
                   child: Row(
                     children: [
-                      Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.all(20),
-                            isDense: true,
-                            border: InputBorder.none,
-                            filled: true,
-                            fillColor: const Color(0xFFFFFFFF),
-                            suffixIcon: Padding(
-                              padding: const EdgeInsets.all(14),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/images/calendar.png",
-                                    height: 26,
-                                    width: 26,
+                      TextField(
+                        decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.all(20),
+                          isDense: true,
+                          border: InputBorder.none,
+                          filled: true,
+                          fillColor: const Color(0xFFFFFFFF),
+                          suffixIcon: Padding(
+                            padding: const EdgeInsets.all(14),
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  "assets/images/calendar.png",
+                                  height: 26,
+                                  width: 26,
+                                ),
+                                const SizedBox(width: 20),
+                                const Text(
+                                  "Month / Year",
+                                  style: TextStyle(
+                                    color: Color(0xFF9E9E9E),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15,
+                                    fontFamily: "Poppins",
                                   ),
-                                  const SizedBox(width: 20),
-                                  const Text(
-                                    "Month / Year",
-                                    style: TextStyle(
-                                      color: Color(0xFF9E9E9E),
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15,
-                                      fontFamily: "Poppins",
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
